@@ -1,4 +1,6 @@
 @import 'service-block';
+@import 'sideBar';
+
 
 @font-face {
   font-family: 'Comic';
@@ -7,8 +9,20 @@
   font-style: italic;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 1rem;
+  padding: 0;
   margin: 0;
   font-family: Comic, sans-serif;
+}
+
+.pagesWrapper {
+  display: flex;
+}
+
+.content {
+  padding: 5px;
 }
