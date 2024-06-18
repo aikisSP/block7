@@ -1,0 +1,121 @@
+@import 'max-min-width';
+@import 'color';
+
+.title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  background: url('../img/icons/highlight.svg') no-repeat left;
+  margin: 0;
+  padding: 20px;
+}
+
+.title-block-buttons {
+  display: flex;
+}
+
+.title-block__repair-button,
+.title-block__search-button {
+  display: none;
+  @media (min-width: $maxWidth) {
+    display: flex;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  overflow: auto;
+  list-style-type: none;
+  gap: 15px;
+  color: $grayTextColor;
+}
+
+.navigation_paragraph,
+.navigation__paragraph_active {
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.navigation__paragraph_active {
+  background-color: $mainColor;
+  border: 2px solid $activeBorderColor;
+}
+
+.navigation_paragraph:hover {
+  background-color: $mainColor;
+}
+
+.navigation__link {
+  text-decoration: none;
+}
+
+.navigation__link:visited {
+  color: $blackTextColor;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $minWidth) {
+    flex-direction: row;
+  }
+}
+
+.text-section__paragraph {
+  margin: 0 0;
+  padding: 10px 20px;
+}
+
+.text-section__main-image {
+  @media (min-width: $minWidth) {
+    border-radius: 5px;
+  }
+  @media (min-width: $minWidth) and (max-width: ($maxWidth - 1px)) {
+    max-height: 176px;
+  }
+  @media (min-width: $minWidth) {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.show-more-button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  gap: 5px;
+  opacity: 100%;
+
+  transition: opacity 300ms, background-color 300ms;
+
+  font-size: 100%;
+}
+
+.show-more-button:hover {
+  opacity: 70%;
+}
+
+.show-more-button:active {
+  background-color: $mainColor;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: $grayTextColor;
+  text-transform: uppercase;
+  background: linear-gradient(to right, $bodyBackgroundColor, $mainColor);
+  border-top: 1px $footerBorderColor solid;
+  padding: 15px 0 15px 15px;
+}

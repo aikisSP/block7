@@ -1,4 +1,4 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
 
 // Инициализируем Swiper
 
@@ -83,5 +83,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // По умолчанию скрываем лишние элементы при загрузке страницы
     hideExcessBrands(); // Скрыть лишние элементы
-});
+ });
 

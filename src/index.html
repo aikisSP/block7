@@ -14,8 +14,7 @@
 </head>
 
 <body>
-    <div class="pagesWrapper">
-        <div class="sideBarWrapper">
+    <!-- <div class="sideBarWrapper">
             <aside class="sidebar">
                 <div class="sidebar__top-part">
                     <div class="sidebar__header">
@@ -71,173 +70,174 @@
                     </div>
                 </div>
             </aside>
+        </div> -->
+    <header class="header">
+        <div class="header__left-part">
+            <img class="header__logo" src="img/icons/Group.svg" alt="Логотип CPS">
+            <img class="header__left-divider divider" src="img/icons/divider.svg" alt="Логотип CPS">
+            <button class="header__menu-button button" name="menu" title="Открыть меню">
+                <img src="img/icons/menu.svg" alt="Меню">
+            </button>
         </div>
-        <div class="content">
-            <nav class="header">
-                <div class="container">
-                    <div class="header__row">
-                        <div class="header__menu">
-                            <a href="#" class="header__menu-a">
-                                <img class="header__menu-img" src="./img/icons/burger.svg" alt="menu">
-                            </a>
-                        </div>
-                        <div class="header__divider divider"></div>
+        <div class="header__right-part">
+            <button class="header__call-button button" name="call" title="Заказать звонок">
+                <img src="img/icons/call.svg" alt="Звонок">
+            </button>
+            <button class="header__chat-button button" name="chat" title="Открыть чат">
+                <img src="img/icons/chat.svg" alt="Чат">
+            </button>
+            <button class="header__profile-button button" name="profile" title="Открыть профиль">
+                <img src="img/icons/profile.svg" alt="Профиль">
+            </button>
+            <img class="header__right-divider divider" src="img/icons/divider.svg" alt="Логотип CPS">
+            <button class="header__repair-button button" name="repair" title="Оставить заявку на ремонт">
+                <img src="img/icons/repair.svg" alt="Ремонт">
+            </button>
+            <button class="header__search-button button" name="status" title="Статус ремонта">
+                <img src="img/icons/checkstatus.svg" alt="Статус">
+            </button>
+        </div>
+    </header>
 
-                        <div class="header__logo">
-                            <a href="#" class="header__logo-a">
-                                <img class="header__logo-img" src="./img/icons/Group.svg" alt="logo">
-                            </a>
-                        </div>
-                        <div class="header__call">
-                            <a href="#" class="header__call-a">
-                                <img src="./img/icons/call.svg" alt="call" class="header__call-img">
-                            </a>
-                        </div>
-                        <div class="header__chat">
-                            <a href="#" class="header__chat-a">
-                                <img src="./img/icons/chat.png" alt="chat" class="header__chat-img">
-                            </a>
-                        </div>
-                        <div class="header__profile">
-                            <a href="#" class="header_profile-a">
-                                <img src="./img/icons/profile.png" alt="profile" class="header__profile-img">
-                            </a>
-                        </div>
-                        <div class="header__divider_2 divider"></div>
-                        <div class="header__tools">
-                            <a class="header__tools-a" href="#">
-                                <span class="header__span">Оставить заявку</span>
-                                <img src="./img/icons/repair.svg" alt="tools">
-                            </a>
-                        </div>
-                        <div class="header__search">
-                            <a href="#" class="header__search-a">
-                                <span class="header__span">Статус ремонта</span>
-                                <img src="./img/icons/checkstatus.svg" alt="search">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </nav>
-            <div class="main">
-                <div class="container">
-                    <div class="main__row">
-                        <div class="main__body">
-                            <div class="main__title">
-                                Услуги и сервисы
-                            </div>
-                            <ul class="main__menu">
-                                <li><a class="active" href="#">Ремонтируемые устройства</a></li>
-                                <li><a href="#">Дополнительные услуги</a></li>
-                                <li><a href="#">Цены на услуги</a></li>
-                                <li><a href="#">Специальные цены</a></li>
-                                <li><a href="#">Адреса сервисных центров</a></li>
-                                <li><a href="#">Отзывы</a></li>
-                            </ul>
-                            <div class="main__content">
-
-                                <div class="main__img">
-                                    <img class="image" src="./img/image/fotoCPS.jpg" alt="fotoCPS">
-
-                                </div>
-                                <div class="main__text">
-                                    <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у
-                                        нас вы
-                                        можете
-                                        отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-
-                                    <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
-
-                                    <a href="#" class="main__read-more-link">
-                                        <span class="icon"></span> Читать далее
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
+    <main>
+        <div class="title-block">
+            <h1 class="title-block-title title">
+                Услуги и сервисы
+            </h1>
+            <div class="title-block-buttons">
+                <button class="title-block__repair-button button button-with-text" name="repair">
+                    <p class="button__text">Оставить заявку</p>
+                    <img src="img/icons/repair.svg" alt="Ремонт">
+                </button>
+                <button class="title-block__search-button button button-with-text" name="search">
+                    <p class="button__text">Статус ремонта</p>
+                    <img src="img/icons/checkstatus.svg" alt="Статус ремонта">
+                </button>
             </div>
-            <div class="swiperWrapper">
-                <header>Ремонт техники различных брендов</header>
-                <div class="brands">
+        </div>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__paragraph_active">
+                    <a class="navigation__link" title="Вы уже на этой странице">Ремонтируемые устройства</a>
+                </li>
+                <li class="navigation_paragraph">
+                    <a href="" class="navigation__link">Дополнительные услуги</a>
+                </li>
+                <li class="navigation_paragraph">
+                    <a href="" class="navigation__link">Цены на услуги</a>
+                </li>
+                <li class="navigation_paragraph">
+                    <a href="" class="navigation__link">Адреса сервисных центров</a>
+                </li>
+                <li class="navigation_paragraph">
+                    <a href="" class="navigation__link">Специальные цены</a>
+                </li>
+                <li class="navigation_paragraph">
+                    <a href="" class="navigation__link">Отзывы</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="text-section">
+            <div class="text-section__description">
+                <p class="text-section__paragraph">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p class="text-section__paragraph hidden">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                    очередь, советуют нас родным и близким.
+                </p>
+                <button class="text-section__read-more-button show-more-button">
+                    <img src="img/icons/show_more_arrow.svg" alt="Читать далее">
+                    <p>Читать далее</p>
+                </button>
+                <button class="text-section__hide-button show-more-button hidden">
+                    <img src="img/icons/hide_arrow.svg" alt="Скрыть">
+                    <p>Скрыть</p>
+                </button>
+            </div>
+            <img class="text-section__main-image" src="img/image/fotoCPS.jpg" alt="Фото логотипа в офисе">
+        </section>
+        <section class="brands">
+            <h2 class="brands__subtitle subtitle">Ремонт техники различных брендов</h2>
+            <div class="wrapper"> 
+                <div class="brands__wrapper">
                     <div class="brands__list">
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/Bitmaplenovo.svg" alt="lenovo">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/Bitmapsamsung.svg" alt="samsung">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/Bitmapapple.svg" alt="apple">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/BitmapViewSonic.svg" alt="ViewSonic">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/BitmapBOSCH.svg" alt="BOSCH">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/BitmapHP.svg" alt="HP">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/Bitmapacer.svg" alt="acer">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand">
                             <img class="brands__logo" src="/img/brands/BitmapSONY.svg" alt="SONY">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand ">
                             <img class="brands__logo" src="/img/brands/Bitmaplenovo.svg" alt="lenovo">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand ">
                             <img class="brands__logo" src="/img/brands/Bitmapsamsung.svg" alt="samsung">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="brands__brand hidden">
                             <img class="brands__logo" src="/img/brands/Bitmapapple.svg" alt="apple">
                             <a class="brands__link" title="Сылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
@@ -252,77 +252,77 @@
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmaplenovo.svg" alt="lenovo">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmapsamsung.svg" alt="samsung">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmapapple.svg" alt="apple">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/BitmapViewSonic.svg" alt="ViewSonic">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/BitmapBOSCH.svg" alt="BOSCH">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/BitmapHP.svg" alt="HP">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmapacer.svg" alt="acer">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/BitmapSONY.svg" alt="SONY">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmaplenovo.svg" alt="lenovo">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brends__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brends__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmapsamsung.svg" alt="samsung">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <img class="brands__logo" src="/img/brands/Bitmapapple.svg" alt="apple">
                             <a class="brands__link" title="Ссылка не подключена" href="">
-                                <img class="brands__button-image" src="/img/brands/gobrand_button.svg"
+                                <img class="brands__button-image" src="/img/icons/gobrand_button.svg"
                                     alt="Перейти по ссылке">
                             </a>
                         </div>
@@ -330,21 +330,25 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <button class="show-more-button">
-                    <img src="/img/brands/expandopen-button.svg" alt="Читать далее">
-                    <p>Показать все</p>
+                <button class="wrapper__read-more-button show-more-button">
+                    <img src="img/icons/show_more_arrow.svg" alt="Читать далее">
+                    <p>Читать далее</p>
                 </button>
-                <button class="hide-button">
-                    <img src="/img/brands/expandhide-button.svg" alt="Скрыть">
+                <button class="wrapper__hide-button show-more-button hidden">
+                    <img src="img/icons/hide_arrow.svg" alt="Скрыть">
                     <p>Скрыть</p>
                 </button>
             </div>
-        </div>
 
-    </div>
+
+        </section>
+    </main>
+
+    
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+
 </body>
 
 </html>

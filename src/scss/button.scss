@@ -1,0 +1,36 @@
+@import 'max-min-width';
+
+.button {
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat right;
+  border: 0;
+  font-family: 'TT Lakes';
+  font-weight: 500;
+  opacity: 100%;
+  display: flex;
+  gap: 10px;
+
+  transition: opacity 200ms;
+}
+
+.button-width-text {
+  width: auto;
+}
+
+.button:hover {
+  opacity: 70%;
+}
+
+.button:active {
+  opacity: 20%;
+}
+
+.button__text {
+  display: none;
+  @media (min-width: $maxWidth) {
+    display: block;
+    text-align: right;
+    white-space: nowrap;
+  }
+}

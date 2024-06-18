@@ -1,0 +1,112 @@
+@import 'max-min-width';
+@import 'color';
+
+.header {
+  height: 78px;
+  background-color: $whiteColor;
+  border-bottom: 1px solid $footerBorderColor;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $maxWidth) {
+    display: none;
+  }
+}
+
+.header__left-part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0 10px 10px;
+  gap: 15px;
+
+  @media (min-width: $maxMobileWidth) {
+    margin: 10px 15px 10px 0;
+  }
+}
+
+.header__right-part {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 10px 10px 0;
+  gap: 15px;
+
+  @media (min-width: $maxMobileWidth) {
+    margin: 10px 15px 10px 0;
+  }
+}
+
+.header__logo {
+  order: 1;
+}
+
+.divider {
+  padding: 10px;
+}
+
+.header__left-divider {
+  order: 2;
+}
+
+.header__right-divider {
+  display: none;
+}
+
+.header__logo {
+  @media (min-width: $minWidth) {
+    order: 2;
+  }
+  @media (min-width: $maxWidth) {
+    display: none;
+  }
+}
+
+.header__right-divider {
+  @media (min-width: $minWidth) {
+    display: block;
+  }
+}
+
+.header__menu-button {
+    order: 0;
+
+    @media (min-width: $maxWidth) {
+        display: none;
+    }
+}
+
+.header__call-button {
+    display: none;
+    @media (min-width: $minWidth) {
+      display: block;
+    }
+  }
+  
+  .header__chat-button {
+    display: none;
+    @media (min-width: $minWidth) {
+      display: block;
+    }
+  }
+  
+  .header__profile-button {
+    display: none;
+    @media (min-width: $minWidth) {
+      display: block;
+    }
+  }
+  
+  .header__repair-button {
+    order: 3;
+    @media (min-width: $minWidth) {
+      display: block;
+    }
+  }
+  
+  .header__search-button {
+    order: 4;
+    @media (min-width: $minWidth) {
+      display: block;
+    }
+  }
