@@ -85,3 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hideExcessBrands(); // Скрыть лишние элементы
  });
 
+
+
+ 

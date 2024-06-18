@@ -1,9 +1,11 @@
 @import 'max-min-width';
 @import 'color';
+@import 'button';
 
 /* Swiper */
 @media (max-width: ($minWidth - 1px)) {
-  .brands__wrapper {
+  .brands__wrapper,
+  .repair__wrapper {
     display: none;
   }
 
@@ -35,7 +37,8 @@
 }
 
 @media (min-width: $minWidth) {
-  .brands__list {
+  .brands__list,
+  .repair__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -46,13 +49,14 @@
 }
 
 @media (min-width: $maxWidth) {
-  .brands__list {
+  .brands__list,
+  .repair__list {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .brands__brand,
-.swiper-slide {
+.brands__swiper-slide {
   display: grid;
   width: 224px;
   height: 72px;
@@ -73,32 +77,155 @@
   padding-right: 40px;
 }
 
-.brands__button-image {
-  opacity: 100%;
-  transition: opacity 300ms;
+
+
+//repair swiper 
+
+.repair-list__repair-type {
+  min-width: 240px;
+  max-width: 240px;
+  height: 160px;
+  background-color: $mainColor;
+  border: 1px $inputBorderColor solid;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  gap: 20px;
+  align-items: center;
 }
 
-.brands__button-image:hover {
-  opacity: 50%;
+.repair-list__text {
+  font-weight: 500;
+  margin-top: 0;
+  margin-left: 10px;
 }
 
-// @media (min-width: 768px) {
-//     .show-more-button, .hide-button {
-//         display: flex;
-//         font-family: TT Lakes;
-//         font-size: 16px;
-//         font-weight: 500;
-//         line-height: 24px;
-//         text-align: left;
-//         background: transparent;
-//         border: none;
-//         align-items: center;
-//         gap: 10px;
-//         margin: 0 0 0 15px;
-//         opacity: 100%;
-//         transition: opacity 300ms;
-//     }
+.repair-list__link {
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
 
-//     .show-more-button:hover, .hide-button:hover {
-//         opacity: 50%;
-//     }
+
+
+//price 
+
+.prices__table {
+  @media (min-width: $minWidth) {
+    margin: 20px;
+  }
+}
+
+.prices__chapters {
+  @media (min-width: $minWidth) {
+    display: grid;
+    grid-template-columns: 45% 20% 20% 15%;
+    margin: 0 20px;
+  }
+}
+
+.prices__chapter {
+  display: none;
+
+  @media (min-width: $minWidth) {
+    display: inline;
+    font-size: 16px;
+    color: $grayTextColor;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+}
+
+.price-list {
+  margin: 20px 15px 10px 15px;
+  padding: 0;
+  list-style: none;
+  overflow-x: scroll;
+  display: flex;
+  gap: 15px;
+  
+  @media (min-width: $minWidth) {
+    grid-area: 2 / 1 / 3 / 5;
+    background-color: $mainColor;
+    border-radius: 5px;
+    overflow-x: unset;
+    display: block;
+    margin: 10px 0 10px 15px;
+    gap: 0;
+  }
+}
+
+.price-list__service {
+  @media (max-width: ($minWidth - 1)) {
+    display: none;
+  }
+
+  @media (min-width: $minWidth) {
+    border-bottom: 3px $bodyBackgroundColor solid;
+    display: grid;
+    grid-template-columns: 45% 20% 20% 15%;
+    margin: 0 20px;
+  }
+}
+
+.price-list__chapter {
+  font-size: 16px;
+  color: $grayTextColor;
+  font-weight: 400;
+  margin-left: 20px;
+  margin: 10px 0 0 20px;
+
+  @media (min-width: $minWidth) {
+    display: none;
+  }
+}
+
+.price-list__name, .price-list__price, .price-list__term {
+  font-size: 16px;
+  color: $blackTextColor;
+  font-weight: 400;
+  margin: 0 0 10px 20px;
+  @media (min-width: $minWidth) {
+    margin: 0;
+    padding: 20px 0;
+  }
+}
+
+.price-list__name, .price-list__price {
+  @media (max-width: ($minWidth - 1px)) {
+    width: 240px;
+  }
+}
+
+.price-list__name {
+  @media (min-width: $minWidth) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.price-list__price {
+  @media (min-width: $minWidth) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+
+.price-list__term {
+  @media (min-width: $minWidth) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+}
+
+
+
+
+
+
+.prices__paragraph {
+  max-width: 480px;
+  margin-left: 20px;
+  @media (min-width: $minWidth) {
+    margin-left: 40px;
+  }
+}
+
+

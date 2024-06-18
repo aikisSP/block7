@@ -1,5 +1,6 @@
 @import 'max-min-width';
 @import 'color';
+@import 'button';
 
 .title-block {
   display: flex;
@@ -13,17 +14,7 @@
   padding: 20px;
 }
 
-.title-block-buttons {
-  display: flex;
-}
 
-.title-block__repair-button,
-.title-block__search-button {
-  display: none;
-  @media (min-width: $maxWidth) {
-    display: flex;
-  }
-}
 
 .navigation__list {
   display: flex;
@@ -85,30 +76,6 @@
   }
 }
 
-.show-more-button {
-  background-color: transparent;
-  border: 0;
-  border-radius: 20%;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  gap: 5px;
-  opacity: 100%;
-
-  transition: opacity 300ms, background-color 300ms;
-
-  font-size: 100%;
-}
-
-.show-more-button:hover {
-  opacity: 70%;
-}
-
-.show-more-button:active {
-  background-color: $mainColor;
-}
 
 .subtitle {
   font-size: 16px;

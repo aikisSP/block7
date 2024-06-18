@@ -1,7 +1,7 @@
 @import 'max-min-width';
+@import 'color';
 
 .button {
-  width: 40px;
   height: 40px;
   background: transparent no-repeat right;
   border: 0;
@@ -34,3 +34,130 @@
     white-space: nowrap;
   }
 }
+
+.title-block-buttons {
+  display: flex;
+}
+
+.title-block__repair-button, .title-block__search-button {
+  display: none;
+  @media (min-width: $maxWidth) {
+    display: flex;
+  }
+}
+
+.show-more-button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  gap: 5px;
+  opacity: 100%;
+
+  transition: opacity 300ms, background-color 300ms;
+
+  font-size: 100%;
+}
+
+.show-more-button:hover {
+  opacity: 70%;
+}
+
+.show-more-button:active {
+  background-color: $mainColor;
+}
+
+
+.brands__button-image {
+  opacity: 100%;
+  transition: opacity 300ms;
+}
+
+.brands__button-image:hover {
+  opacity: 50%;
+}
+
+.show-more-button {
+  @media (max-width: $minWidth) {
+    display: none;
+  }
+}
+
+.repair-list__button-image {
+  opacity: 100%;
+  transition: opacity 300ms;
+}
+
+.repair-list__button-image:hover {
+  opacity: 60%;
+}
+
+.price-list__button {
+  float: right;
+  @media (min-width: $minWidth) {
+    grid-area: 1 / 4 / 2 / 5;
+    margin: 10px 10px;
+  }
+}
+
+
+.send-button {
+  width: 130px;
+  background-color: $orderColor;
+  border: transparent;
+  border-radius: 40px;
+  text-transform: uppercase;
+  opacity: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  transition: opacity 300ms;
+}
+
+.send-button:hover {
+  opacity: 60%;
+}
+
+.send-button__text {
+  font-family: 'TT Lakes', sans-serif;
+  color: $mainColor;
+  font-weight: 600;
+  margin: 8px;
+}
+
+.send-button__image {
+  margin: 8px;
+}
+
+
+
+
+// @media (min-width: 768px) {
+//     .show-more-button, .hide-button {
+//         display: flex;
+//         font-family: TT Lakes;
+//         font-size: 16px;
+//         font-weight: 500;
+//         line-height: 24px;
+//         text-align: left;
+//         background: transparent;
+//         border: none;
+//         align-items: center;
+//         gap: 10px;
+//         margin: 0 0 0 15px;
+//         opacity: 100%;
+//         transition: opacity 300ms;
+//     }
+
+//     .show-more-button:hover, .hide-button:hover {
+//         opacity: 50%;
+//     }
+//   }
