@@ -3,7 +3,7 @@
 @import 'color';
 @import 'header';
 @import 'main';
-// @import 'sideBar';
+@import 'sidebar';
 @import 'swipper';
 @import 'footer';
 
@@ -15,10 +15,34 @@
 
 
 body {
-  font-family: 'TT Lakes', sans-serif;
+  font-family: "TT Lakes", sans-serif;
   background-color: $bodyBackgroundColor;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  @media (min-width: $maxWidth) {
+    display: grid;
+    grid-template-areas:
+      "aside main"
+      "aside foot";
+    grid-template-rows: 1fr 120px;
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+body > .sidebar-left {
+  grid-area: aside;
+}
+
+body > main {
+  grid-area: main;
+}
+
+body > .footer {
+  grid-area: foot;
+}
+
+.hidden {
+  display: none;
 }
 
 

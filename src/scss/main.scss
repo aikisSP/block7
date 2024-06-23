@@ -15,7 +15,6 @@
 }
 
 
-
 .navigation__list {
   display: flex;
   overflow: auto;
@@ -85,4 +84,17 @@
   background: linear-gradient(to right, $bodyBackgroundColor, $mainColor);
   border-top: 1px $footerBorderColor solid;
   padding: 15px 0 15px 15px;
+}
+
+
+.brands__list {
+  height: 168px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.repair__list {
+  height: 168px;
+  overflow: hidden;
+  transition: height 0.3s ease;
 }

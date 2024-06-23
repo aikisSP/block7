@@ -1,6 +1,5 @@
-import '../scss/style.scss';
 
-// Инициализируем Swiper
+import '../scss/style.scss';
 
 const swiper = new Swiper('.swiper', {
     pagination: {
@@ -13,78 +12,93 @@ const swiper = new Swiper('.swiper', {
     slideToClickedSlide: true,
     slidesPerView: 'auto',
     spaceBetween: 20,
-    loop: true,
+    loop: false,
     effect: 'coverflow',
     coverflowEffect: {
         rotate: 30,
         slideShadows: false,
     },
 });
-if (window.matchMedia('(min-width: 768px)').matches) {
-    swiper.destroy(); // Уничтожаем слайдер
-}
+
+import { openSidebar, closeSidebar } from './sidebar.js';
+import { showMore, hide} from './show-more.js';
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const showButton = document.querySelector(".show-more-button");
-    const hideButton = document.querySelector(".hide-button");
-    const brandsBrands = document.querySelectorAll(".brands__brand");
+const hiddenClass = "hidden";
 
-    // Функция показа всех элементов .brands__brand
-    function showAllBrands() {
-        brandsBrands.forEach((brand) => {
-            brand.classList.remove("hidden");
+const sidebarLayer = document.querySelector(".sidebar-left-layer");
+const menuSidebar = document.querySelector(".sidebar-menu");
+const openButton = document.querySelector(".header__menu-button");
+const closeButton = document.querySelector(".sidebar-menu__close-button");
+
+const sidebarLeftOpenClass = "sidebar-left_open";
+
+openSidebar(menuSidebar, openButton, sidebarLeftOpenClass, sidebarLayer, hiddenClass);
+closeSidebar(menuSidebar, closeButton, sidebarLeftOpenClass, sidebarLayer, hiddenClass);
+
+const sidebarRightLayer = document.querySelector(".sidebar-right-layer");
+const feedbackSidebar = document.querySelector(".sidebar-feedback");
+const openFeedbackButtons = [document.querySelector(".header__repair-button"), document.querySelector(".title-block__repair-button")];
+const closeFeedbackButton = document.querySelector(".sidebar-feedback__close-button");
+
+const sidebarRightOpenClass = "sidebar-right_open";
+
+openSidebar(feedbackSidebar, openFeedbackButtons[0], sidebarRightOpenClass, sidebarRightLayer, hiddenClass);
+openSidebar(feedbackSidebar, openFeedbackButtons[1], sidebarRightOpenClass, sidebarRightLayer, hiddenClass);
+closeSidebar(feedbackSidebar, closeFeedbackButton, sidebarRightOpenClass, sidebarRightLayer, hiddenClass);
+
+const requestSidebar = document.querySelector(".sidebar-request");
+const openRequestButtons = [document.querySelector(".header__search-button"), document.querySelector(".title-block__search-button")];
+const closeRequestButton = document.querySelector(".sidebar-request__close-button");
+
+openSidebar(requestSidebar, openRequestButtons[0], sidebarRightOpenClass, sidebarRightLayer, hiddenClass);
+openSidebar(requestSidebar, openRequestButtons[1], sidebarRightOpenClass, sidebarRightLayer, hiddenClass);
+closeSidebar(requestSidebar, closeRequestButton, sidebarRightOpenClass, sidebarRightLayer, hiddenClass);
+
+const mainText = document.querySelectorAll(".text-section__paragraph");
+const showMoreButton = document.querySelector(".text-section__read-more-button");
+const hideButton = document.querySelector(".text-section__hide-button");
+
+showMore(mainText[1], showMoreButton, hideButton, hiddenClass);
+hide(mainText[1], showMoreButton, hideButton, hiddenClass);
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const brandsList = document.querySelector('.brands__list');
+    const repairList = document.querySelector('.repair__list');
+    const brandsShowMoreButton = document.querySelector('.brands__read-more-button');
+    const brandsHideButton = document.querySelector('.brands__hide-button');
+    const repairShowMoreButton = document.querySelector('.repair__read-more-button');
+    const repairHideButton = document.querySelector('.repair__hide-button');
+
+    if (brandsList && showMoreButton && hideButton) {
+        brandsShowMoreButton.addEventListener('click', () => {
+            brandsList.style.height = '323px';
+            brandsShowMoreButton.classList.add('hidden');
+            brandsHideButton.classList.remove('hidden');
         });
-        updateButtonsVisibility(); // Обновить видимость кнопок
+
+        brandsHideButton.addEventListener('click', () => {
+            brandsList.style.height = '168px';
+            brandsHideButton.classList.add('hidden');
+            brandsShowMoreButton.classList.remove('hidden');
+        });
     }
 
-    // Функция скрытия последних элементов .brands__brand в зависимости от ширины экрана
-    function hideExcessBrands() {
-        const screenWidth = window.innerWidth;
-        let hideCount = 0;
+    if (repairList && showMoreButton && hideButton) {
+        repairShowMoreButton.addEventListener('click', () => {
+            repairList.style.height = '323px';
+            repairShowMoreButton.classList.add('hidden');
+            repairHideButton.classList.remove('hidden');
+        });
 
-        if (screenWidth >= 1120) {
-            hideCount = brandsBrands.length - 8; // Скрыть последние 4 элемента
-        } else if (screenWidth >= 768) {
-            hideCount = brandsBrands.length - 6; // Скрыть последние 3 элемента
-        }
-
-        for (let i = brandsBrands.length - 1; i >= 0 && hideCount > 0; i--) {
-            brandsBrands[i].classList.add("hidden");
-            hideCount--;
-        }
-
-        updateButtonsVisibility(); // Обновить видимость кнопок
+        repairHideButton.addEventListener('click', () => {
+            repairList.style.height = '168px';
+            repairHideButton.classList.add('hidden');
+            repairShowMoreButton.classList.remove('hidden');
+        });
     }
-
-    // Обновление видимости кнопок в зависимости от состояния элементов
-    function updateButtonsVisibility() {
-        const hiddenBrandsCount = document.querySelectorAll(".brands__brand.hidden").length;
-
-        if (hiddenBrandsCount > 0) {
-            showButton.style.display = "flex";
-            hideButton.style.display = "none";
-        } else {
-            showButton.style.display = "none";
-            hideButton.style.display = "flex";
-        }
-    }
-
-    // Обработчик события клика на кнопку "Показать все"
-    showButton.addEventListener("click", function () {
-        showAllBrands(); // Показать все элементы
-    });
-
-    // Обработчик события клика на кнопку "Скрыть"
-    hideButton.addEventListener("click", function () {
-        hideExcessBrands(); // Скрыть лишние элементы
-    });
-
-    // По умолчанию скрываем лишние элементы при загрузке страницы
-    hideExcessBrands(); // Скрыть лишние элементы
- });
-
-
-
- 
+});

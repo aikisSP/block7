@@ -46,7 +46,8 @@
   }
 }
 
-.show-more-button {
+.show-more-button,
+.prices__next-button {
   background-color: transparent;
   border: 0;
   border-radius: 20%;
@@ -81,7 +82,7 @@
   opacity: 50%;
 }
 
-.show-more-button {
+.wrapper__read-more-button {
   @media (max-width: $minWidth) {
     display: none;
   }
