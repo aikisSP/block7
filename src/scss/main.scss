@@ -23,6 +23,10 @@
   color: $grayTextColor;
 }
 
+.navigation__list::-webkit-scrollbar {
+  width: 0;
+}
+
 .navigation_paragraph,
 .navigation__paragraph_active {
   padding: 5px 10px;
